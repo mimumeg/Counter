@@ -8,6 +8,8 @@ class Counter:
     def increase2(self):
         self.value += 3
 
+    def increase3(self):
+        self.value += 5
 
 if __name__ == "__main__":
     counter_1 = Counter(0)
@@ -24,7 +26,16 @@ if __name__ == "__main__":
     print(counter_2.value)  # 15 が出力される
 
     counter_2.increase2()
-    print(counter_2.value)  # 16 が出力される  <-- 1だけ増えてる!
+    print(counter_2.value)
 
     counter_2.increase2()
-    print(counter_2.value)  # 17 が出力される  <-- さらに1だけ増えてる!
+    print(counter_2.value)
+
+    counter_3 = Counter(-5)
+    print(counter_3.value)  # -5 が出力される
+
+    counter_3.increase3()
+    print(counter_3.value)  # 0 が出力される
+
+    counter_3.increase3()
+    print(counter_3.value)  # 5 が出力される
